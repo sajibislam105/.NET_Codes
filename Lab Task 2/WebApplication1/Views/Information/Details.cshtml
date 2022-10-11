@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Information Details</h2>
+<br>
+<form action="/Information/Details" method="post">
+
+    <input class="form-control" type="text" placeholder="Name" name="Name" value="@(Model ==null ? "" : Model.Name)" />
+    @Html.ValidationMessage("Name")
+    <input class="form-control" type="text" placeholder="Id" name="Id" value="@(Model ==null ? "" : Model.Id)" />
+    @Html.ValidationMessage("Id")<br />
+
+    <label>Gender</label> <br>
+    <input type="radio" id="Male" name="Gender" value="Male" />
+    <label for="Male">Male</label>
+    <input type="radio" id="Female" name="Gender" value="Female" />
+    <label for="Female">Female</label>
+    <br />
+    @Html.ValidationMessage("Gender")
+
+    <input class="form-control" type="email" placeholder="Email" name="email" value="@(Model ==null ? "" : Model.email)" />
+    @Html.ValidationMessage("email")
+    <input class="form-control" type="password" placeholder="Password" name="password" value="" />
+    @Html.ValidationMessage("password")
+    <input class="form-control" type="password" placeholder="Confirm Password" name="confPassword" value="" />
+    @Html.ValidationMessage("confPassword")
+    <input class="form-control" type="date" placeholder="Date of Birth" name="DOB" value="@(Model ==null ? "" : Model.DOB)"/>
+    @Html.ValidationMessage("DOB")
+    <br>
+    <input class="btn-primary" type="submit" value="Submit" />
+    
+</form>
