@@ -1,0 +1,32 @@
+﻿@model List<CRUDE_Operation.DB.Product>
+@{
+    ViewBag.Title = "AddtoCart";
+}
+<h2 class="page-header">Cart</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Total</td>
+        </tr>    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Qty</td>
+            <td>@(item.Qty*@item.Price)</td>
+
+        </tr>
+    
+    }
+    </table>
+        <a href="/CRUD/ProductList" class="btn btn-primary">Add</a>
+        <a class="btn btn-primary" href="/CRUD/Checkout">Checkout</a>
+
+
+
