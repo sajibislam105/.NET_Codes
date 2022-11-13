@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ZeroHunger.DB.Collect_Request>
+
+@{
+    ViewBag.Title = "RequestHistory";
+}
+
+<h2>Request History</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Request_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Food_Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Program_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restaurant_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Request_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Food_Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Program_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Restaurant_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+    </tr>
+}
+
+</table>

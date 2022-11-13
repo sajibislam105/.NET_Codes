@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ZeroHunger.DB.Collect_Request>
+
+@{
+    ViewBag.Title = "PendingFoodCollection";
+}
+
+<h2>Pending Food Collection</h2>
+
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Food_Amount)
+            <p>(in KG)</p>
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.Program_Type)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Food_Amount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Program_Type)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td hidden>
+     @Html.DisplayFor(modelItem => item.Employee_Id)
+    </td>
+
+    <td>
+        @Html.ActionLink("Distribute", "Edit", new { id = item.Restaurant_Id}) |
+        @Html.ActionLink("Confirm Distribution", "Completeness_Status", new { id = item.Request_Id})
+    </td>
+</tr>
+}
+</table>

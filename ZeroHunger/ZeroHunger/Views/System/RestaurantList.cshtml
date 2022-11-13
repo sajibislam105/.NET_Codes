@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ZeroHunger.DB.Restaurant>
+
+@{
+    ViewBag.Title = "RestaurantList";
+}
+
+<h2>RestaurantList</h2>
+
+<p>
+    @Html.ActionLink("Add New", "AddRestaurant")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Restaurant_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restaurant_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Restaurant_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Restaurant_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+</table>
+<div>
+    @Html.ActionLink("Back to Dashboard", "NGO_Dashboard")
+</div>

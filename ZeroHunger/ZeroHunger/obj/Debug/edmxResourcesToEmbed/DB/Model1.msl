@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZeroHungerModelStoreContainer" CdmEntityContainer="ZeroHungerEntities">
+    <EntitySetMapping Name="Collect_Request">
+      <EntityTypeMapping TypeName="ZeroHungerModel.Collect_Request">
+        <MappingFragment StoreEntitySet="Collect_Request">
+          <ScalarProperty Name="Request_Id" ColumnName="Request_Id" />
+          <ScalarProperty Name="Food_Amount" ColumnName="Food_Amount" />
+          <ScalarProperty Name="Program_Type" ColumnName="Program_Type" />
+          <ScalarProperty Name="Restaurant_Id" ColumnName="Restaurant_Id" />
+          <ScalarProperty Name="Employee_Id" ColumnName="Employee_Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="ZeroHungerModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Employee_Pass" ColumnName="Employee_Pass" />
+          <ScalarProperty Name="Employee_Id" ColumnName="Employee_Id" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_Gender" ColumnName="Employee_Gender" />
+          <ScalarProperty Name="Employee_Age" ColumnName="Employee_Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGOes">
+      <EntityTypeMapping TypeName="ZeroHungerModel.NGO">
+        <MappingFragment StoreEntitySet="NGO">
+          <ScalarProperty Name="NGO_Id" ColumnName="NGO_Id" />
+          <ScalarProperty Name="NGO_Name" ColumnName="NGO_Name" />
+          <ScalarProperty Name="NGO_Password" ColumnName="NGO_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurants">
+      <EntityTypeMapping TypeName="ZeroHungerModel.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurants">
+          <ScalarProperty Name="Restaurant_Pass" ColumnName="Restaurant_Pass" />
+          <ScalarProperty Name="Restaurant_Id" ColumnName="Restaurant_Id" />
+          <ScalarProperty Name="Restaurant_Name" ColumnName="Restaurant_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

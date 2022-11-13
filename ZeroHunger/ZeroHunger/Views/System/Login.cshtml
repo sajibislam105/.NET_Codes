@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form action="" method="post">
+
+    <label for="Type">Choose your Type:</label>
+
+    <select name="Type" id="Type">
+        <option value="NGO">NGO</option>
+        <option value="Restaurant">Restaurant</option>
+        <option value="Employee">Employee</option>
+    </select>
+    <br>
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" placeholder="Enter Name" />
+    <br>
+    <label for="Pass">Passwoord:</label>
+    <input type="password" name="Pass" placeholder="Enter Pass" />
+    <br>
+    <input type="submit" name="Login" value="Login" class="btn-default" />
+</form>
